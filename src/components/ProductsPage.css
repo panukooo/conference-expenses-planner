@@ -1,0 +1,7 @@
+.products-container {
+    /*background: url("https://i.imgur.com/GCJRhiA.png");*/
+    height: 99%;
+    margin: 0;
+    border: dotted 1px transparent;
+    color: white;
+}

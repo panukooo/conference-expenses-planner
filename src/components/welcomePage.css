@@ -1,0 +1,20 @@
+.flex-welcome {
+    display: flex;
+    justify-content: center;
+    height: 99%;
+    align-items: center;
+    background: url(https://i.imgur.com/GCJRhiA.png);
+    color: whitesmoke;
+}
+
+.flex-container-1 {
+    flex: 1 1 45%;
+    padding: 0 20px 0 20px;
+    text-align: center;
+}
+
+.flex-container-2 {
+    flex: 1 1 55%;
+    padding: 0 100px 0 0;
+    text-align: justify;
+}

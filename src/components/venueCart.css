@@ -1,0 +1,39 @@
+.flex-venue-container {
+    display: flex;
+    flex-wrap:wrap;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+.flex-venue-cart {
+    margin: 3%;
+    background: whitesmoke;
+    padding: 8px;
+    color: black;
+    border-radius: 10px;
+}
+
+img {
+    width: 200px;
+    border-radius: 10px;
+    height: 150px;
+}
+
+.dec-btn {
+    background:cadetblue;
+    border:none;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.inc-btn {
+    background:cornflowerblue;
+    border: none;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.qty-span {
+    margin: 0 5px 0 5px;
+}
