@@ -13,6 +13,7 @@ let mealsSlice = createSlice({
         setQuantity: (state, action) => {
             let itemToIncrease = state.mealsItems.find(item => item.id === action.payload.id);
             itemToIncrease.quantity = action.payload.quantity;
+            itemToIncrease.totalItemAmount = itemToIncrease.quantity * itemToIncrease.price;
             state.totalMealsAmount = state.mealsItems.reduce((accumulator, meal) => accumulator + meal.quantity * meal.price, 0);
         }
     }

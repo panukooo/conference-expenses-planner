@@ -13,23 +13,23 @@ const SectionCreator = () => {
 
     console.log("section creator updates");
     return(
-        <>
+        <div className="sections-container">
             <section id={sectionData[0].id} className="venue-section">
-                <h1>{sectionData[0].name}</h1>
+                <h1 className="h1-section">{sectionData[0].name}</h1>
                 <VenueCartBuilder />
-                <p>Total Cost: ${totalVenueAmount}</p>
+                <p className="p-total-amount">Total Cost: ${totalVenueAmount}</p>
             </section>
             <section id={sectionData[1].id} className="venue-section">
-                <h1>{sectionData[1].name}</h1>
+                <h1 className="h1-section">{sectionData[1].name}</h1>
                 <AddOnsCartBuilder />
-                <p>Total Cost: ${totalAddOnsAmount}</p>
+                <p className="p-total-amount">Total Cost: ${totalAddOnsAmount}</p>
             </section>
             <section id={sectionData[2].id} className="venue-section">
-                <h1>{sectionData[2].name}</h1>
+                <h1 className="h1-section">{sectionData[2].name}</h1>
                 <MealsCartBuilder />
-                <p>Total Cost: ${totalMealsAmount}</p>
+                <p className="p-total-amount">Total Cost: ${totalMealsAmount}</p>
             </section>
-        </>
+        </div>
     );
 }
 

@@ -1,0 +1,40 @@
+.hide-details {
+    display: none;
+}
+
+.show-details {
+    position: fixed;
+    background: white;
+    padding: 0;
+    left: 25%;
+    top: 25%;
+    right: 25%;
+    bottom: 25%;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.314);
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.show-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+}
+
+tr, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+.details-btn {
+    width: 20%;
+}

@@ -1,7 +1,15 @@
-import React from 'react';
+import {React, useState } from 'react';
 import './navigator.css';
+import ShowDetails from './ShowDetails';
+import './showDetails.css';
 
 const Navigator = (props) => {
+    let [isOnProductsPage, setIsInProductsPage] = useState(true);
+
+    const handleNavigation = (isOn) => {
+        setIsInProductsPage(!isOn);
+    }
+
     return(
         <header>
             <nav className="flex-nav">
@@ -11,8 +19,13 @@ const Navigator = (props) => {
                     <li><a href="#add-ons-section">Add-Ons</a></li>
                     <li><a href="#meals-section">Meals</a></li>
                 </ul>
-                <span className="flex-span"><button className="nav-button">Show Details</button></span>
+                <span className="flex-span">
+                    <button className="nav-button" onClick={() => {handleNavigation(true)}}>Show Details</button>
+                </span>
             </nav>
+            <div className={`${isOnProductsPage ? "hide-details" : "show-details"}`}>
+                <ShowDetails handleNav = {handleNavigation}/>
+            </div>
         </header>
     );
 }

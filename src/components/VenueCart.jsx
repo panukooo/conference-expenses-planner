@@ -8,8 +8,6 @@ export const VenueCartBuilder = () => {
     let venueItems = useSelector(state => state.venues.venueItems);
     const dispatch = useDispatch()
 
-    console.log(venueItems.map(item => item));
-
     const handleQuantityIncrease = (payload) => {
         dispatch(increaseQuantity(payload));
     }

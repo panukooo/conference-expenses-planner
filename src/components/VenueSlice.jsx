@@ -15,15 +15,14 @@ const VenueSlice = createSlice({
         increaseQuantity: (state, action) => {
             let itemToIncrease = state.venueItems.find(item => item.id === action.payload);
             itemToIncrease.quantity += 1;
-            state.totalVenueAmount += itemToIncrease.price;
-            console.log(state.totalVenueAmount);
+            itemToIncrease.totalItemAmount = itemToIncrease.quantity * itemToIncrease.price;
+            state.totalAddOnsAmount += itemToIncrease.price;
         },
         decreaseQuantity: (state, action) => {
             let itemToDecrease = state.venueItems.find(item => item.id === action.payload);
             itemToDecrease.quantity -= 1;
-            state.totalVenueAmount -= itemToDecrease.price;
-            console.log(state.totalVenueAmount);
-
+            itemToDecrease.totalItemAmount = itemToDecrease.quantity * itemToDecrease.price;
+            state.totalAddOnsAmount -= itemToDecrease.price;
         }
     } 
 });
