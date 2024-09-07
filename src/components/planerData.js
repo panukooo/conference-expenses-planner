@@ -13,7 +13,6 @@ export const sectionData = [
     {id: "meals-section", name: "Meals Selection"}
 ];
 
-
 export const addOnsData = [
     {type: "addOn", id: 1, image: "https://www.sono-energie.com/22899-medium_default/enceintes-actives-bt12a-12-30cm-450w-pieds.jpg", name: "Speakers", price: 35, quantity: 0, totalItemAmount: 0},
     {type: "addOn", id: 2, image: "https://5.imimg.com/data5/NQ/FQ/MY-19725029/neodymium-microphone-nd-1010-x-500x500.jpg", name: "Microphones", price: 45, quantity: 0, totalItemAmount: 0},
@@ -22,12 +21,9 @@ export const addOnsData = [
     {type: "addOn", id: 5, image: "https://www.designerpeople.com//wp-content/uploads/2022/08/brand-signage-1.jpg", name: "Signage", price: 80, quantity: 0, totalItemAmount: 0},
 ];
 
-
-
 export const mealsData = [
     {type: "meal", id: 1, image: "https://images.services.kitchenstories.io/R9CvpB25mR7zRBillZ_yuRTl1tg=/3840x0/filters:quality(85)/images.kitchenstories.io/wagtailOriginalImages/R2798-photo-final-1.jpg", name: "Breakfast", price: 50, quantity: 0, totalItemAmount: 0},
     {type: "meal", id: 2, image: "https://images.immediate.co.uk/production/volatile/sites/30/2022/10/Pork-carnitas-b94893e.jpg", name: "Lunch", price: 60, quantity: 0, totalItemAmount: 0},
     {type: "meal", id: 3, image: "https://www.beaumontetiquette.com/wp-content/uploads/2024/06/1606229935-the-perfect-afternoon-tea-menu-cover-photo.jpeg", name: "High Tea", price: 25, quantity: 0, totalItemAmount: 0},
     {type: "meal", id: 4, image: "https://studio.pinotspalette.com/naperville/images/vdaydinner23.jpg", name: "Dinner", price: 70, quantity: 0, totalItemAmount: 0},
 ]
-

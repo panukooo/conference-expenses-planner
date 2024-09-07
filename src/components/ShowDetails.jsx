@@ -25,7 +25,6 @@ const ShowDetails = (props) => {
 
     return(
         <article className="show-details-container">
-            
             <h1 className='details-h1'>Total Cost For The Event</h1>
             <h1 className='details-h1'>${totalEventAmount}</h1>
             <div className='div-overflow'>
