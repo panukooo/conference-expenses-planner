@@ -9,8 +9,8 @@
 }
 
 .flex-meal-cart {
-    margin: 3%;
-    background: whitesmoke;
+    margin: 2%;
+    background: rgba(245, 245, 245, 0.636);
     padding: 8px;
     color: black;
     border-radius: 10px;
@@ -20,10 +20,15 @@ img {
     width: 200px;
     border-radius: 10px;
     height: 150px;
+    margin: 0;
 }
 
 input {
     text-align: center;
-    width: 30%;
+    width: 26%;
     margin-top: 5px;
+}
+
+.p-carts {
+    margin: 3px;
 }

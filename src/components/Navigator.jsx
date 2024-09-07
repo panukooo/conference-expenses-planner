@@ -11,7 +11,7 @@ const Navigator = (props) => {
     }
 
     return(
-        <header>
+        <header className='header-nav'>
             <nav className="flex-nav">
                 <h1 className="flex-header" onClick={() => {props.handleNav(false)}}>Conference Planer</h1>
                 <ul className="flex-list">

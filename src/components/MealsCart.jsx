@@ -8,6 +8,7 @@ const MealCartBuilder = () => {
     let dispatch = useDispatch();
 
     const handleSetQuantity = (payload) => {
+        if(payload.quantity < 0) return;
         dispatch(setQuantity(payload));
     }
 
@@ -16,8 +17,8 @@ const MealCartBuilder = () => {
         {mealsItems.map(meal =>
             <article className="flex-meal-cart">
                 <img src={meal.image} alt={meal.name}/>
-                <p>{meal.name}</p>
-                <p>${meal.price}</p>
+                <p className='p-carts'>{meal.name}</p>
+                <p className='p-carts'>${meal.price}</p>
                 <span>
                     <label htmlFor="persons">Number of Persons</label>
                     <br />

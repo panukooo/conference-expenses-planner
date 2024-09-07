@@ -1,5 +1,7 @@
 .sections-container {
     padding: 0 15% 0 15%;
+    background: url(C:\Users\Oscar\Documents\React-Projects\conference-expenses-planner\src\components\images\GCJRhiA.png);
+    margin-top: 81.2px;
 }
 
 .venue-section {
@@ -14,8 +16,8 @@
 
 .h1-section {
     padding: 9px;
-    background: navy;
-    color: white;
+    background: rgba(65, 69, 139, 0.437);
+    color: rgb(215, 229, 18);
     width: 50%;
 }
 

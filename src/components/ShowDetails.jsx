@@ -25,22 +25,25 @@ const ShowDetails = (props) => {
 
     return(
         <article className="show-details-container">
-            <h1>Total Cost For The Event</h1>
-            <h1>${totalEventAmount}</h1>
-            <table>
+            
+            <h1 className='details-h1'>Total Cost For The Event</h1>
+            <h1 className='details-h1'>${totalEventAmount}</h1>
+            <div className='div-overflow'>
+                <table>
                     <thead>
-                        <tr>
+                        <tr className='highlighted-header-row'>
                             <th>Name</th> <th>Unit Cost</th> <th>Quantity</th> <th>Total Cost</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {itemsSelected.map(( (element) => 
-                            <tr>
-                                <td>{element.name}</td> <td>{`$${element.price}`}</td> <td>{element.quantity}</td> <td>{element.totalItemAmount}</td>
+                        {itemsSelected.map(( (element, index) => 
+                            <tr className={index % 2 === 0 ? "regular-row" : "highlighted-regular-row"}>
+                                <td>{element.type === "venue" ? `${element.name} Capacity: ${element.capacity}` : `${element.name}`}</td> <td>{`$${element.price}`}</td> <td>{element.type === "meal" ? `For ${element.quantity} people` : `${element.quantity}`}</td> <td>{element.totalItemAmount}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
+            </div>
             <span><button className="details-btn" onClick={() => {handleNavigation(true)}}>OK</button></span>
         </article>
     );

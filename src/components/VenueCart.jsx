@@ -13,7 +13,8 @@ export const VenueCartBuilder = () => {
     }
 
     const handleQuantityDecrease = (payload) => {
-        dispatch(decreaseQuantity(payload));
+        if(payload.quantity -1 < 0) return;
+        dispatch(decreaseQuantity(payload.id));
     }
 
     return(
@@ -21,11 +22,11 @@ export const VenueCartBuilder = () => {
         {venueItems.map(venue =>
             <article className="flex-venue-cart">
                 <img src={venue.image} alt={venue.parraf}/>
-                <p>{venue.name}</p>
-                <p>Capacity: {venue.capacity}</p>
-                <p>${venue.price}</p>
+                <p className='p-carts'>{venue.name}</p>
+                <p className='p-carts'>Capacity: {venue.capacity}</p>
+                <p className='p-carts'>${venue.price}</p>
                 <span>
-                    <button className="dec-btn" onClick={() => {handleQuantityDecrease(venue.id)}}>-</button>
+                    <button className="dec-btn" onClick={() => {handleQuantityDecrease({id: venue.id, quantity: venue.quantity})}}>-</button>
                     <span className="qty-span">{venue.quantity}</span>
                     <button className="inc-btn" onClick={() => {handleQuantityIncrease(venue.id)}}>+</button>
                 </span>

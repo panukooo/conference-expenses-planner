@@ -13,7 +13,8 @@ const AddOnsCartBuilder = () => {
     }
 
     const handleQuantityDecrease = (payload) => {
-        dispatch(decreaseQuantity(payload));
+        if(payload.quantity - 1 < 0) return;
+        dispatch(decreaseQuantity(payload.id));
     }
 
     return(
@@ -21,10 +22,10 @@ const AddOnsCartBuilder = () => {
         {addOnsItems.map(addOn =>
             <article className="flex-addOn-cart">
                 <img src={addOn.image} alt={addOn.parraf}/>
-                <p>{addOn.name}</p>
-                <p>${addOn.price} ea.</p>
+                <p className='p-carts'>{addOn.name}</p>
+                <p className='p-carts'>${addOn.price} ea.</p>
                 <span>
-                    <button className="dec-btn" onClick={() => {handleQuantityDecrease(addOn.id)}}>-</button>
+                    <button className="dec-btn" onClick={() => {handleQuantityDecrease({id: addOn.id, quantity: addOn.quantity})}}>-</button>
                     <span className="qty-span">{addOn.quantity}</span>
                     <button className="inc-btn" onClick={() => {handleQuantityIncrease(addOn.id)}}>+</button>
                 </span>
