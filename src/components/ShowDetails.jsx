@@ -38,7 +38,7 @@ const ShowDetails = (props) => {
                     <tbody>
                         {itemsSelected.map(( (element, index) => 
                             <tr className={index % 2 === 0 ? "regular-row" : "highlighted-regular-row"}>
-                                <td>{element.type === "venue" ? `${element.name} Capacity: ${element.capacity}` : `${element.name}`}</td> <td>{`$${element.price}`}</td> <td>{element.type === "meal" ? `For ${element.quantity} people` : `${element.quantity}`}</td> <td>{element.totalItemAmount}</td>
+                                <td>{element.type === "venue" ? `${element.name} Capacity: ${element.capacity}` : `${element.name}`}</td> <td>{`$${element.price}`}</td> <td>{element.type === "meal" ? `For ${element.quantity} people` : `${element.quantity}`}</td> <td>{`$${element.totalItemAmount}`}</td>
                             </tr>
                         ))}
                     </tbody>

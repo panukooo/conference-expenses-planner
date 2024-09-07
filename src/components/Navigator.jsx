@@ -28,6 +28,7 @@ const Navigator = (props) => {
             </div>
         </header>
     );
+    
 }
 
 export default Navigator;
